@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.leftPanel = new System.Windows.Forms.Panel();
+            this.subMenu_user = new System.Windows.Forms.Panel();
+            this.btn_user = new System.Windows.Forms.Button();
+            this.submenu_Issua = new System.Windows.Forms.Panel();
+            this.add_issua = new System.Windows.Forms.Button();
+            this.list_issua = new System.Windows.Forms.Button();
+            this.btn_isssue_Book = new System.Windows.Forms.Button();
             this.subMenu_Books = new System.Windows.Forms.Panel();
             this.genres_Book_btn = new System.Windows.Forms.Button();
             this.author_Book_btn = new System.Windows.Forms.Button();
@@ -38,7 +44,11 @@
             this.btn_books = new System.Windows.Forms.Button();
             this.btn_dashboard = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_list_user = new System.Windows.Forms.Button();
+            this.btn_add_user = new System.Windows.Forms.Button();
             this.leftPanel.SuspendLayout();
+            this.subMenu_user.SuspendLayout();
+            this.submenu_Issua.SuspendLayout();
             this.subMenu_Books.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +56,10 @@
             // 
             this.leftPanel.AutoScroll = true;
             this.leftPanel.BackColor = System.Drawing.Color.White;
+            this.leftPanel.Controls.Add(this.subMenu_user);
+            this.leftPanel.Controls.Add(this.btn_user);
+            this.leftPanel.Controls.Add(this.submenu_Issua);
+            this.leftPanel.Controls.Add(this.btn_isssue_Book);
             this.leftPanel.Controls.Add(this.subMenu_Books);
             this.leftPanel.Controls.Add(this.btn_books);
             this.leftPanel.Controls.Add(this.btn_dashboard);
@@ -53,8 +67,88 @@
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftPanel.Location = new System.Drawing.Point(0, 0);
             this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(188, 561);
+            this.leftPanel.Size = new System.Drawing.Size(188, 666);
             this.leftPanel.TabIndex = 0;
+            // 
+            // subMenu_user
+            // 
+            this.subMenu_user.Controls.Add(this.btn_add_user);
+            this.subMenu_user.Controls.Add(this.btn_list_user);
+            this.subMenu_user.Dock = System.Windows.Forms.DockStyle.Top;
+            this.subMenu_user.Location = new System.Drawing.Point(0, 483);
+            this.subMenu_user.Name = "subMenu_user";
+            this.subMenu_user.Size = new System.Drawing.Size(188, 100);
+            this.subMenu_user.TabIndex = 7;
+            // 
+            // btn_user
+            // 
+            this.btn_user.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_user.FlatAppearance.BorderSize = 0;
+            this.btn_user.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_user.Location = new System.Drawing.Point(0, 448);
+            this.btn_user.Name = "btn_user";
+            this.btn_user.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btn_user.Size = new System.Drawing.Size(188, 35);
+            this.btn_user.TabIndex = 6;
+            this.btn_user.Text = "Users";
+            this.btn_user.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_user.UseVisualStyleBackColor = true;
+            this.btn_user.Click += new System.EventHandler(this.btn_user_Click);
+            // 
+            // submenu_Issua
+            // 
+            this.submenu_Issua.Controls.Add(this.add_issua);
+            this.submenu_Issua.Controls.Add(this.list_issua);
+            this.submenu_Issua.Dock = System.Windows.Forms.DockStyle.Top;
+            this.submenu_Issua.Location = new System.Drawing.Point(0, 373);
+            this.submenu_Issua.Name = "submenu_Issua";
+            this.submenu_Issua.Size = new System.Drawing.Size(188, 75);
+            this.submenu_Issua.TabIndex = 5;
+            // 
+            // add_issua
+            // 
+            this.add_issua.Dock = System.Windows.Forms.DockStyle.Top;
+            this.add_issua.FlatAppearance.BorderSize = 0;
+            this.add_issua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.add_issua.Location = new System.Drawing.Point(0, 35);
+            this.add_issua.Name = "add_issua";
+            this.add_issua.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.add_issua.Size = new System.Drawing.Size(188, 35);
+            this.add_issua.TabIndex = 1;
+            this.add_issua.Text = "Add new";
+            this.add_issua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.add_issua.UseVisualStyleBackColor = true;
+            this.add_issua.Click += new System.EventHandler(this.add_issua_Click);
+            // 
+            // list_issua
+            // 
+            this.list_issua.Dock = System.Windows.Forms.DockStyle.Top;
+            this.list_issua.FlatAppearance.BorderSize = 0;
+            this.list_issua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.list_issua.Location = new System.Drawing.Point(0, 0);
+            this.list_issua.Name = "list_issua";
+            this.list_issua.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.list_issua.Size = new System.Drawing.Size(188, 35);
+            this.list_issua.TabIndex = 0;
+            this.list_issua.Text = "List";
+            this.list_issua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.list_issua.UseVisualStyleBackColor = true;
+            this.list_issua.Click += new System.EventHandler(this.list_issua_Click);
+            // 
+            // btn_isssue_Book
+            // 
+            this.btn_isssue_Book.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_isssue_Book.FlatAppearance.BorderSize = 0;
+            this.btn_isssue_Book.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_isssue_Book.Location = new System.Drawing.Point(0, 338);
+            this.btn_isssue_Book.Name = "btn_isssue_Book";
+            this.btn_isssue_Book.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btn_isssue_Book.Size = new System.Drawing.Size(188, 35);
+            this.btn_isssue_Book.TabIndex = 4;
+            this.btn_isssue_Book.Text = "Issued Books";
+            this.btn_isssue_Book.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_isssue_Book.UseVisualStyleBackColor = true;
+            this.btn_isssue_Book.Click += new System.EventHandler(this.btn_isssue_Book_Click);
             // 
             // subMenu_Books
             // 
@@ -64,7 +158,7 @@
             this.subMenu_Books.Controls.Add(this.add_Book_btn);
             this.subMenu_Books.Controls.Add(this.all_Book_btn);
             this.subMenu_Books.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenu_Books.Location = new System.Drawing.Point(0, 166);
+            this.subMenu_Books.Location = new System.Drawing.Point(0, 160);
             this.subMenu_Books.Name = "subMenu_Books";
             this.subMenu_Books.Size = new System.Drawing.Size(188, 178);
             this.subMenu_Books.TabIndex = 3;
@@ -157,7 +251,7 @@
             this.btn_books.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.btn_books.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_books.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_books.Location = new System.Drawing.Point(0, 131);
+            this.btn_books.Location = new System.Drawing.Point(0, 125);
             this.btn_books.Name = "btn_books";
             this.btn_books.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btn_books.Size = new System.Drawing.Size(188, 35);
@@ -174,7 +268,7 @@
             this.btn_dashboard.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.btn_dashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.btn_dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_dashboard.Location = new System.Drawing.Point(0, 96);
+            this.btn_dashboard.Location = new System.Drawing.Point(0, 90);
             this.btn_dashboard.Name = "btn_dashboard";
             this.btn_dashboard.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btn_dashboard.Size = new System.Drawing.Size(188, 35);
@@ -189,20 +283,50 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(188, 96);
+            this.panel1.Size = new System.Drawing.Size(188, 90);
             this.panel1.TabIndex = 0;
+            // 
+            // btn_list_user
+            // 
+            this.btn_list_user.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_list_user.FlatAppearance.BorderSize = 0;
+            this.btn_list_user.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_list_user.Location = new System.Drawing.Point(0, 0);
+            this.btn_list_user.Name = "btn_list_user";
+            this.btn_list_user.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btn_list_user.Size = new System.Drawing.Size(188, 35);
+            this.btn_list_user.TabIndex = 0;
+            this.btn_list_user.Text = "List Users";
+            this.btn_list_user.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_list_user.UseVisualStyleBackColor = true;
+            // 
+            // btn_add_user
+            // 
+            this.btn_add_user.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_add_user.FlatAppearance.BorderSize = 0;
+            this.btn_add_user.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_add_user.Location = new System.Drawing.Point(0, 35);
+            this.btn_add_user.Name = "btn_add_user";
+            this.btn_add_user.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btn_add_user.Size = new System.Drawing.Size(188, 35);
+            this.btn_add_user.TabIndex = 1;
+            this.btn_add_user.Text = "Add User";
+            this.btn_add_user.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_add_user.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(934, 561);
+            this.ClientSize = new System.Drawing.Size(934, 666);
             this.Controls.Add(this.leftPanel);
             this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MinimumSize = new System.Drawing.Size(950, 600);
             this.Name = "Main";
             this.Text = "Main";
             this.leftPanel.ResumeLayout(false);
+            this.subMenu_user.ResumeLayout(false);
+            this.submenu_Issua.ResumeLayout(false);
             this.subMenu_Books.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -220,5 +344,13 @@
         private System.Windows.Forms.Button author_Book_btn;
         private System.Windows.Forms.Button pub_Book_btn;
         private System.Windows.Forms.Button add_Book_btn;
+        private System.Windows.Forms.Button btn_isssue_Book;
+        private System.Windows.Forms.Panel submenu_Issua;
+        private System.Windows.Forms.Button add_issua;
+        private System.Windows.Forms.Button list_issua;
+        private System.Windows.Forms.Button btn_user;
+        private System.Windows.Forms.Panel subMenu_user;
+        private System.Windows.Forms.Button btn_add_user;
+        private System.Windows.Forms.Button btn_list_user;
     }
 }

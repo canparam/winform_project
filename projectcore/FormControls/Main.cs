@@ -18,6 +18,8 @@ namespace projectcore.FormControls
         private void Custom()
         {
             subMenu_Books.Visible = false;
+            submenu_Issua.Visible = false;
+            subMenu_user.Visible = false;
 
         }
         private void hideSubMenu()
@@ -26,6 +28,15 @@ namespace projectcore.FormControls
             {
                 subMenu_Books.Visible = false;
             }
+            if (submenu_Issua.Visible == true)
+            {
+                submenu_Issua.Visible = false;
+            }
+            if (subMenu_user.Visible == true)
+            {
+                subMenu_user.Visible = false;
+            }
+
         }
         private void showSubMenu(Panel subMenu)
         {
@@ -38,10 +49,11 @@ namespace projectcore.FormControls
             {
                 subMenu.Visible = false;
             }
+            
         }
         private void btn_dashboard_Click(object sender, EventArgs e)
         {
-            Button[] listDeActive = { btn_books, all_Book_btn, add_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn };
+            Button[] listDeActive = { btn_user, btn_books, all_Book_btn, add_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn, btn_isssue_Book, add_issua };
 
             Helper.DeActiveButton(listDeActive);
             btn_dashboard.SwtichToBoldRegular();
@@ -52,7 +64,7 @@ namespace projectcore.FormControls
         }
         private void btn_books_Click(object sender, EventArgs e)
         {
-            Button[] listDeActive = { btn_dashboard, all_Book_btn, add_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn };
+            Button[] listDeActive = { btn_user, btn_dashboard, all_Book_btn, add_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn, btn_isssue_Book, add_issua };
 
             Helper.DeActiveButton(listDeActive);
             showSubMenu(subMenu_Books);
@@ -64,7 +76,7 @@ namespace projectcore.FormControls
 
         private void all_Book_btn_Click(object sender, EventArgs e)
         {
-            Button[] listDeActive = { btn_dashboard, add_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn };
+            Button[] listDeActive = { btn_user, btn_dashboard, add_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn, btn_isssue_Book, add_issua };
             Helper.DeActiveButton(listDeActive);
             if(all_Book_btn.Font.Style != FontStyle.Bold)
             {
@@ -77,7 +89,7 @@ namespace projectcore.FormControls
 
         private void add_Book_btn_Click(object sender, EventArgs e)
         {
-            Button[] listDeActive = { btn_dashboard, all_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn };
+            Button[] listDeActive = { btn_user, btn_dashboard, all_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn, btn_isssue_Book, add_issua };
             Helper.DeActiveButton(listDeActive);
             if (add_Book_btn.Font.Style != FontStyle.Bold)
             {
@@ -88,7 +100,7 @@ namespace projectcore.FormControls
 
         private void pub_Book_btn_Click(object sender, EventArgs e)
         {
-            Button[] listDeActive = { btn_dashboard, add_Book_btn, all_Book_btn, author_Book_btn, genres_Book_btn };
+            Button[] listDeActive = { btn_user, btn_dashboard, add_Book_btn, all_Book_btn, author_Book_btn, genres_Book_btn, btn_isssue_Book, add_issua };
             Helper.DeActiveButton(listDeActive);
             if (pub_Book_btn.Font.Style != FontStyle.Bold)
             {
@@ -99,7 +111,7 @@ namespace projectcore.FormControls
 
         private void author_Book_btn_Click(object sender, EventArgs e)
         {
-            Button[] listDeActive = { btn_dashboard, add_Book_btn, all_Book_btn, genres_Book_btn, pub_Book_btn};
+            Button[] listDeActive = { btn_user, btn_dashboard, add_Book_btn, all_Book_btn, genres_Book_btn, pub_Book_btn, btn_isssue_Book, add_issua };
             Helper.DeActiveButton(listDeActive);
             if (author_Book_btn.Font.Style != FontStyle.Bold)
             {
@@ -110,13 +122,57 @@ namespace projectcore.FormControls
 
         private void genres_Book_btn_Click(object sender, EventArgs e)
         {
-            Button[] listDeActive = { btn_dashboard, add_Book_btn, all_Book_btn, author_Book_btn, pub_Book_btn };
+            Button[] listDeActive = { btn_user, btn_dashboard, add_Book_btn, all_Book_btn, author_Book_btn, pub_Book_btn, btn_isssue_Book, add_issua };
             Helper.DeActiveButton(listDeActive);
             if (genres_Book_btn.Font.Style != FontStyle.Bold)
             {
                 genres_Book_btn.Font = new Font(genres_Book_btn.Font, FontStyle.Bold);
                 genres_Book_btn.SwichBG();
             }
+        }
+
+        private void btn_isssue_Book_Click(object sender, EventArgs e)
+        {
+            Button[] listDeActive = { btn_user, btn_dashboard, btn_books, all_Book_btn, add_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn, add_issua };
+            Helper.DeActiveButton(listDeActive);
+            showSubMenu(submenu_Issua);
+            btn_isssue_Book.SwtichToBoldRegular();
+            btn_isssue_Book.SwtichColor();
+            btn_isssue_Book.SwichBG();
+
+        }
+
+        private void list_issua_Click(object sender, EventArgs e)
+        {
+            Button[] listDeActive = { btn_user, btn_dashboard, btn_books, all_Book_btn, add_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn, btn_isssue_Book, add_issua };
+            Helper.DeActiveButton(listDeActive);
+            if (list_issua.Font.Style != FontStyle.Bold)
+            {
+                list_issua.Font = new Font(list_issua.Font, FontStyle.Bold);
+                list_issua.SwichBG();
+            }
+        }
+
+        private void add_issua_Click(object sender, EventArgs e)
+        {
+            Button[] listDeActive = { btn_user, btn_dashboard, btn_books, all_Book_btn, add_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn, btn_isssue_Book, list_issua };
+            Helper.DeActiveButton(listDeActive);
+            if (add_issua.Font.Style != FontStyle.Bold)
+            {
+                add_issua.Font = new Font(add_issua.Font, FontStyle.Bold);
+                add_issua.SwichBG();
+            }
+        }
+
+        private void btn_user_Click(object sender, EventArgs e)
+        {
+            Button[] listDeActive = { btn_dashboard, btn_books, all_Book_btn, add_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn, btn_isssue_Book, list_issua, add_issua };
+
+            Helper.DeActiveButton(listDeActive);
+            btn_user.SwtichToBoldRegular();
+            btn_user.SwtichColor();
+            btn_user.SwichBG();
+            showSubMenu(subMenu_user);
         }
     }
 }
