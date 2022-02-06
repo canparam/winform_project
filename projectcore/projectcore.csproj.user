@@ -7,6 +7,36 @@
     <Compile Update="FormControls\Main.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormControls\pages\book\addbook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormControls\pages\book\allbook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormControls\pages\book\author.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormControls\pages\book\genre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormControls\pages\book\publisher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormControls\pages\dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormControls\pages\issued\add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormControls\pages\issued\list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormControls\pages\user\add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormControls\pages\user\list.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="RJControls\RJButton.cs">
       <SubType>Component</SubType>
     </Compile>

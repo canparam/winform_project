@@ -1,4 +1,5 @@
-﻿using System;
+﻿using projectcore.models;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
@@ -8,6 +9,7 @@ namespace projectcore
 {
     static class Helper
     {
+        public static Admin admin;
         public static void SwtichToBoldRegular(this Button c)
         {
             if (c.Font.Style != FontStyle.Bold)

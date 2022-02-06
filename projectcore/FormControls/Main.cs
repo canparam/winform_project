@@ -1,4 +1,5 @@
-﻿using System;
+﻿using projectcore.FormControls.pages;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,18 @@ namespace projectcore.FormControls
     {
         public Main()
         {
+
             InitializeComponent();
+            Form1.ActiveForm.Hide();
             Custom();
+
         }
         private void Custom()
         {
             subMenu_Books.Visible = false;
             submenu_Issua.Visible = false;
             subMenu_user.Visible = false;
+
 
         }
         private void hideSubMenu()
@@ -53,18 +58,19 @@ namespace projectcore.FormControls
         }
         private void btn_dashboard_Click(object sender, EventArgs e)
         {
-            Button[] listDeActive = { btn_user, btn_books, all_Book_btn, add_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn, btn_isssue_Book, add_issua };
-
+            Button[] listDeActive = { btn_add_user, btn_list_user, btn_user, btn_books, all_Book_btn, add_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn, btn_isssue_Book, add_issua };
+            openChildFormInPanel(new dashboard());
             Helper.DeActiveButton(listDeActive);
             btn_dashboard.SwtichToBoldRegular();
             btn_dashboard.SwtichColor();
             btn_dashboard.SwichBG();
             hideSubMenu();
+            
 
         }
         private void btn_books_Click(object sender, EventArgs e)
         {
-            Button[] listDeActive = { btn_user, btn_dashboard, all_Book_btn, add_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn, btn_isssue_Book, add_issua };
+            Button[] listDeActive = { btn_add_user, btn_list_user, btn_user, btn_dashboard, all_Book_btn, add_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn, btn_isssue_Book, add_issua };
 
             Helper.DeActiveButton(listDeActive);
             showSubMenu(subMenu_Books);
@@ -76,20 +82,21 @@ namespace projectcore.FormControls
 
         private void all_Book_btn_Click(object sender, EventArgs e)
         {
-            Button[] listDeActive = { btn_user, btn_dashboard, add_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn, btn_isssue_Book, add_issua };
+            Button[] listDeActive = { btn_add_user, btn_list_user, btn_user, btn_dashboard, add_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn, btn_isssue_Book, add_issua };
             Helper.DeActiveButton(listDeActive);
             if(all_Book_btn.Font.Style != FontStyle.Bold)
             {
                 all_Book_btn.Font = new Font(all_Book_btn.Font, FontStyle.Bold);
                 all_Book_btn.SwichBG();
             }
-            
+            openChildFormInPanel(new allbook());
+
 
         }
 
         private void add_Book_btn_Click(object sender, EventArgs e)
         {
-            Button[] listDeActive = { btn_user, btn_dashboard, all_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn, btn_isssue_Book, add_issua };
+            Button[] listDeActive = { btn_add_user, btn_list_user, btn_user, btn_dashboard, all_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn, btn_isssue_Book, add_issua };
             Helper.DeActiveButton(listDeActive);
             if (add_Book_btn.Font.Style != FontStyle.Bold)
             {
@@ -100,7 +107,7 @@ namespace projectcore.FormControls
 
         private void pub_Book_btn_Click(object sender, EventArgs e)
         {
-            Button[] listDeActive = { btn_user, btn_dashboard, add_Book_btn, all_Book_btn, author_Book_btn, genres_Book_btn, btn_isssue_Book, add_issua };
+            Button[] listDeActive = { btn_add_user, btn_list_user, btn_user, btn_dashboard, add_Book_btn, all_Book_btn, author_Book_btn, genres_Book_btn, btn_isssue_Book, add_issua };
             Helper.DeActiveButton(listDeActive);
             if (pub_Book_btn.Font.Style != FontStyle.Bold)
             {
@@ -111,7 +118,7 @@ namespace projectcore.FormControls
 
         private void author_Book_btn_Click(object sender, EventArgs e)
         {
-            Button[] listDeActive = { btn_user, btn_dashboard, add_Book_btn, all_Book_btn, genres_Book_btn, pub_Book_btn, btn_isssue_Book, add_issua };
+            Button[] listDeActive = { btn_add_user, btn_list_user, btn_user, btn_dashboard, add_Book_btn, all_Book_btn, genres_Book_btn, pub_Book_btn, btn_isssue_Book, add_issua };
             Helper.DeActiveButton(listDeActive);
             if (author_Book_btn.Font.Style != FontStyle.Bold)
             {
@@ -122,7 +129,7 @@ namespace projectcore.FormControls
 
         private void genres_Book_btn_Click(object sender, EventArgs e)
         {
-            Button[] listDeActive = { btn_user, btn_dashboard, add_Book_btn, all_Book_btn, author_Book_btn, pub_Book_btn, btn_isssue_Book, add_issua };
+            Button[] listDeActive = { btn_add_user, btn_list_user, btn_user, btn_dashboard, add_Book_btn, all_Book_btn, author_Book_btn, pub_Book_btn, btn_isssue_Book, add_issua };
             Helper.DeActiveButton(listDeActive);
             if (genres_Book_btn.Font.Style != FontStyle.Bold)
             {
@@ -133,7 +140,7 @@ namespace projectcore.FormControls
 
         private void btn_isssue_Book_Click(object sender, EventArgs e)
         {
-            Button[] listDeActive = { btn_user, btn_dashboard, btn_books, all_Book_btn, add_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn, add_issua };
+            Button[] listDeActive = { btn_add_user, btn_list_user, btn_user, btn_dashboard, btn_books, all_Book_btn, add_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn, add_issua };
             Helper.DeActiveButton(listDeActive);
             showSubMenu(submenu_Issua);
             btn_isssue_Book.SwtichToBoldRegular();
@@ -144,7 +151,7 @@ namespace projectcore.FormControls
 
         private void list_issua_Click(object sender, EventArgs e)
         {
-            Button[] listDeActive = { btn_user, btn_dashboard, btn_books, all_Book_btn, add_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn, btn_isssue_Book, add_issua };
+            Button[] listDeActive = { btn_add_user, btn_list_user, btn_user, btn_dashboard, btn_books, all_Book_btn, add_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn, add_issua };
             Helper.DeActiveButton(listDeActive);
             if (list_issua.Font.Style != FontStyle.Bold)
             {
@@ -155,7 +162,7 @@ namespace projectcore.FormControls
 
         private void add_issua_Click(object sender, EventArgs e)
         {
-            Button[] listDeActive = { btn_user, btn_dashboard, btn_books, all_Book_btn, add_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn, btn_isssue_Book, list_issua };
+            Button[] listDeActive = { btn_add_user, btn_list_user,btn_user, btn_dashboard, btn_books, all_Book_btn, add_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn, list_issua };
             Helper.DeActiveButton(listDeActive);
             if (add_issua.Font.Style != FontStyle.Bold)
             {
@@ -174,5 +181,45 @@ namespace projectcore.FormControls
             btn_user.SwichBG();
             showSubMenu(subMenu_user);
         }
+
+
+        private void btn_list_user_Click(object sender, EventArgs e)
+        {
+            Button[] listDeActive = { btn_add_user, btn_dashboard, btn_books, all_Book_btn, add_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn, btn_isssue_Book, list_issua, add_issua };
+
+            Helper.DeActiveButton(listDeActive);
+            if (btn_list_user.Font.Style != FontStyle.Bold)
+            {
+                btn_list_user.Font = new Font(btn_list_user.Font, FontStyle.Bold);
+                btn_list_user.SwichBG();
+            }
+        }
+
+        private void btn_add_user_Click(object sender, EventArgs e)
+        {
+            Button[] listDeActive = { btn_list_user,btn_dashboard, btn_books, all_Book_btn, add_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn, btn_isssue_Book, list_issua, add_issua };
+
+            Helper.DeActiveButton(listDeActive);
+            if (btn_add_user.Font.Style != FontStyle.Bold)
+            {
+                btn_add_user.Font = new Font(btn_add_user.Font, FontStyle.Bold);
+                btn_add_user.SwichBG();
+            }
+        }
+        private Form activeForm = null;
+        private void openChildFormInPanel(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(childForm);
+            panelMain.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
     }
 }

@@ -1,4 +1,8 @@
-﻿using System;
+﻿using projectcore.Database;
+using projectcore.FormControls;
+using projectcore.models;
+using projectcore.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,13 +16,15 @@ namespace projectcore
 {
     public partial class Form1 : Form
     {
+        private IBase<Admin> AdminService;
         public Form1()
         {
+            AdminService = new AdminService(new LibaryContext());
             InitializeComponent();
         }
         private void Username_enter(object sender, EventArgs e)
         {
-           if(userName.Texts == "Tên đăng nhập")
+           if(userName.Texts == "Username")
             {
                 userName.Texts = "";
             }
@@ -27,12 +33,12 @@ namespace projectcore
         {
             if (userName.Texts == "")
             {
-                userName.Texts = "Tên đăng nhập";
+                userName.Texts = "Username";
             }
         }
         private void Password_enter(object sender, EventArgs e)
         {
-            if (Password.Texts == "Mật khẩu")
+            if (Password.Texts == "Password")
             {
                 Password.Texts = "";
                 Password.PasswordChar = true;
@@ -42,7 +48,7 @@ namespace projectcore
         {
             if (Password.Texts == "")
             {
-                Password.Texts = "Mật khẩu";
+                Password.Texts = "Password";
                 Password.PasswordChar = false;
             }
         }
@@ -50,13 +56,13 @@ namespace projectcore
         private string Validate_Login()
         {
             string mess = "";
-            if(String.IsNullOrEmpty(userName.Texts) || userName.Texts == "Tên đăng nhập")
+            if(String.IsNullOrEmpty(userName.Texts) || userName.Texts == "Username")
             {
-                mess += "Vui lòng nhập tên\n";
+                mess += "Input username\n";
             }
-            if(String.IsNullOrEmpty(Password.Texts) || Password.Texts == "Mật khẩu")
+            if(String.IsNullOrEmpty(Password.Texts) || Password.Texts == "Password")
             {
-                mess += "Vui lòng nhập mật khẩu \n";
+                mess += "Input password \n";
             }
             return mess;
         }
@@ -64,29 +70,35 @@ namespace projectcore
         private void btn_login_Click(object sender, EventArgs e)
         {
             string validate = Validate_Login();
-            if(!String.IsNullOrEmpty(validate))
+            messValidate.Font = new Font("Calibri", 10);
+            messValidate.ForeColor = Color.Red;
+            if (!String.IsNullOrEmpty(validate))
             {
                 messValidate.Text = validate;
-                messValidate.Font = new Font("Calibri", 10);
-                messValidate.ForeColor = Color.Red;
+                
                 return;
             }
-            else
+            
+            string Tpassword = Password.Texts;
+            string username = userName.Texts;
+
+            btn_login.Enabled = false;
+            Admin ad = AdminService.getAll().FirstOrDefault(e=> e.username == username && e.password == Tpassword);
+            Cursor.Current = Cursors.WaitCursor;
+            if (ad == null)
             {
-                messValidate.Text = "";
-                MessageBox.Show("Đăng nhập thành công","Thông báo");
+                messValidate.Text = "Login fail!";
+                btn_login.Enabled = true;
+                return;
             }
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
+            messValidate.Text = "";
+            Helper.admin = ad;
+            Form m = new Main();
+            m.Show();
+            
 
         }
+
     }
     
 }
