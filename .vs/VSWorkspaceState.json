@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\projectcore",
+    "\\projectcore\\Database",
+    "\\projectcore\\FormControls",
+    "\\projectcore\\FormControls\\pages",
+    "\\projectcore\\FormControls\\pages\\book",
+    "\\projectcore\\FormControls\\pages\\user",
+    "\\projectcore\\Services"
+  ],
+  "SelectedNode": "\\projectcore\\Services\\Base.cs",
+  "PreviewInSolutionExplorer": false
+}

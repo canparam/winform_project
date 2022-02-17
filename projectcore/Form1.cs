@@ -16,11 +16,16 @@ namespace projectcore
 {
     public partial class Form1 : Form
     {
-        private IBase<Admin> AdminService;
-        public Form1()
+        private readonly IAdminService _adminService;
+        private readonly IServiceProvider _serviceProvider;
+
+        public Form1(IAdminService adminService, IServiceProvider serviceProvider)
         {
-            AdminService = new AdminService(new LibaryContext());
+            _adminService = adminService;
+            _serviceProvider = serviceProvider;
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+
         }
         private void Username_enter(object sender, EventArgs e)
         {
@@ -69,6 +74,7 @@ namespace projectcore
 
         private void btn_login_Click(object sender, EventArgs e)
         {
+
             string validate = Validate_Login();
             messValidate.Font = new Font("Calibri", 10);
             messValidate.ForeColor = Color.Red;
@@ -83,7 +89,7 @@ namespace projectcore
             string username = userName.Texts;
 
             btn_login.Enabled = false;
-            Admin ad = AdminService.getAll().FirstOrDefault(e=> e.username == username && e.password == Tpassword);
+            Admin ad = _adminService.CheckLogin(username,Tpassword);
             Cursor.Current = Cursors.WaitCursor;
             if (ad == null)
             {
@@ -93,7 +99,7 @@ namespace projectcore
             }
             messValidate.Text = "";
             Helper.admin = ad;
-            Form m = new Main();
+            Form m = new Main(_serviceProvider);
             m.Show();
             
 

@@ -13,5 +13,11 @@ namespace projectcore.models
         public int id { get; set; }
         [Required,StringLength(255)]
         public string name { get; set; }
+        public int status { get; set; }
+
+        public override string ToString()
+        {
+            return name;
+        }
     }
 }

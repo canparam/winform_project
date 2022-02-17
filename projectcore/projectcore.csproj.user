@@ -16,6 +16,9 @@
     <Compile Update="FormControls\pages\book\author.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormControls\pages\book\EditBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormControls\pages\book\genre.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -25,13 +28,31 @@
     <Compile Update="FormControls\pages\dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormControls\pages\issued\add.cs">
+    <Compile Update="FormControls\pages\issues\add.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormControls\pages\issued\list.cs">
+    <Compile Update="FormControls\pages\issues\ChooseBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormControls\pages\issues\ChooseUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormControls\pages\issues\detail\Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormControls\pages\issues\list.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormControls\pages\user\add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormControls\pages\user\BookDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormControls\pages\user\Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormControls\pages\user\edit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormControls\pages\user\list.cs">

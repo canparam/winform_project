@@ -1,4 +1,5 @@
-﻿using projectcore.FormControls.pages;
+﻿using Microsoft.Extensions.DependencyInjection;
+using projectcore.FormControls.pages;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,14 +10,19 @@ using System.Windows.Forms;
 
 namespace projectcore.FormControls
 {
+
     public partial class Main : Form
     {
-        public Main()
-        {
+        private readonly IServiceProvider _serviceProvider;
 
+        public Main(IServiceProvider serviceProvider)
+        {
+            _serviceProvider = serviceProvider;
             InitializeComponent();
             Form1.ActiveForm.Hide();
             Custom();
+            this.StartPosition = FormStartPosition.CenterScreen;
+
 
         }
         private void Custom()
@@ -59,13 +65,14 @@ namespace projectcore.FormControls
         private void btn_dashboard_Click(object sender, EventArgs e)
         {
             Button[] listDeActive = { btn_add_user, btn_list_user, btn_user, btn_books, all_Book_btn, add_Book_btn, pub_Book_btn, author_Book_btn, genres_Book_btn, btn_isssue_Book, add_issua };
-            openChildFormInPanel(new dashboard());
             Helper.DeActiveButton(listDeActive);
             btn_dashboard.SwtichToBoldRegular();
             btn_dashboard.SwtichColor();
             btn_dashboard.SwichBG();
             hideSubMenu();
-            
+            var form = _serviceProvider.GetRequiredService<dashboard>();
+
+            openChildFormInPanel(form);
 
         }
         private void btn_books_Click(object sender, EventArgs e)
@@ -89,7 +96,9 @@ namespace projectcore.FormControls
                 all_Book_btn.Font = new Font(all_Book_btn.Font, FontStyle.Bold);
                 all_Book_btn.SwichBG();
             }
-            openChildFormInPanel(new allbook());
+            var form = _serviceProvider.GetRequiredService<allbook>();
+
+            openChildFormInPanel(form);
 
 
         }
@@ -103,6 +112,9 @@ namespace projectcore.FormControls
                 add_Book_btn.Font = new Font(all_Book_btn.Font, FontStyle.Bold);
                 add_Book_btn.SwichBG();
             }
+            var form = _serviceProvider.GetRequiredService<pages.addbook>();
+
+            openChildFormInPanel(form);
         }
 
         private void pub_Book_btn_Click(object sender, EventArgs e)
@@ -114,6 +126,9 @@ namespace projectcore.FormControls
                 pub_Book_btn.Font = new Font(pub_Book_btn.Font, FontStyle.Bold);
                 pub_Book_btn.SwichBG();
             }
+            var form = _serviceProvider.GetRequiredService<pages.book.publisher>();
+
+            openChildFormInPanel(form);
         }
 
         private void author_Book_btn_Click(object sender, EventArgs e)
@@ -125,6 +140,9 @@ namespace projectcore.FormControls
                 author_Book_btn.Font = new Font(author_Book_btn.Font, FontStyle.Bold);
                 author_Book_btn.SwichBG();
             }
+            var form = _serviceProvider.GetRequiredService<pages.book.author>();
+
+            openChildFormInPanel(form);
         }
 
         private void genres_Book_btn_Click(object sender, EventArgs e)
@@ -136,6 +154,9 @@ namespace projectcore.FormControls
                 genres_Book_btn.Font = new Font(genres_Book_btn.Font, FontStyle.Bold);
                 genres_Book_btn.SwichBG();
             }
+            var forms = _serviceProvider.GetRequiredService<pages.book.genre>();
+            openChildFormInPanel(forms);
+
         }
 
         private void btn_isssue_Book_Click(object sender, EventArgs e)
@@ -158,6 +179,8 @@ namespace projectcore.FormControls
                 list_issua.Font = new Font(list_issua.Font, FontStyle.Bold);
                 list_issua.SwichBG();
             }
+            var form = _serviceProvider.GetRequiredService<pages.issued.list>();
+            openChildFormInPanel(form);
         }
 
         private void add_issua_Click(object sender, EventArgs e)
@@ -169,6 +192,8 @@ namespace projectcore.FormControls
                 add_issua.Font = new Font(add_issua.Font, FontStyle.Bold);
                 add_issua.SwichBG();
             }
+            var form = _serviceProvider.GetRequiredService<pages.issued.add>();
+            openChildFormInPanel(form);
         }
 
         private void btn_user_Click(object sender, EventArgs e)
@@ -193,6 +218,8 @@ namespace projectcore.FormControls
                 btn_list_user.Font = new Font(btn_list_user.Font, FontStyle.Bold);
                 btn_list_user.SwichBG();
             }
+            var forms = _serviceProvider.GetRequiredService<pages.user.list>();
+            openChildFormInPanel(forms);
         }
 
         private void btn_add_user_Click(object sender, EventArgs e)
@@ -205,12 +232,18 @@ namespace projectcore.FormControls
                 btn_add_user.Font = new Font(btn_add_user.Font, FontStyle.Bold);
                 btn_add_user.SwichBG();
             }
+            var form = _serviceProvider.GetRequiredService<pages.user.add>();
+            openChildFormInPanel(form);
         }
         private Form activeForm = null;
         private void openChildFormInPanel(Form childForm)
         {
             if (activeForm != null)
-                activeForm.Close();
+            {
+                activeForm.Hide();
+
+            }
+
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -218,6 +251,7 @@ namespace projectcore.FormControls
             panelMain.Controls.Add(childForm);
             panelMain.Tag = childForm;
             childForm.BringToFront();
+            
             childForm.Show();
         }
 

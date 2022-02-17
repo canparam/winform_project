@@ -85,7 +85,7 @@
             this.subMenu_user.Dock = System.Windows.Forms.DockStyle.Top;
             this.subMenu_user.Location = new System.Drawing.Point(0, 659);
             this.subMenu_user.Name = "subMenu_user";
-            this.subMenu_user.Size = new System.Drawing.Size(167, 103);
+            this.subMenu_user.Size = new System.Drawing.Size(171, 103);
             this.subMenu_user.TabIndex = 7;
             // 
             // btn_add_user
@@ -96,7 +96,7 @@
             this.btn_add_user.Location = new System.Drawing.Point(0, 50);
             this.btn_add_user.Name = "btn_add_user";
             this.btn_add_user.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btn_add_user.Size = new System.Drawing.Size(167, 50);
+            this.btn_add_user.Size = new System.Drawing.Size(171, 50);
             this.btn_add_user.TabIndex = 1;
             this.btn_add_user.Text = "Add User";
             this.btn_add_user.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -111,7 +111,7 @@
             this.btn_list_user.Location = new System.Drawing.Point(0, 0);
             this.btn_list_user.Name = "btn_list_user";
             this.btn_list_user.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btn_list_user.Size = new System.Drawing.Size(167, 50);
+            this.btn_list_user.Size = new System.Drawing.Size(171, 50);
             this.btn_list_user.TabIndex = 0;
             this.btn_list_user.Text = "List Users";
             this.btn_list_user.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -126,7 +126,7 @@
             this.btn_user.Location = new System.Drawing.Point(0, 609);
             this.btn_user.Name = "btn_user";
             this.btn_user.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btn_user.Size = new System.Drawing.Size(167, 50);
+            this.btn_user.Size = new System.Drawing.Size(171, 50);
             this.btn_user.TabIndex = 6;
             this.btn_user.Text = "Users";
             this.btn_user.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -140,7 +140,7 @@
             this.submenu_Issua.Dock = System.Windows.Forms.DockStyle.Top;
             this.submenu_Issua.Location = new System.Drawing.Point(0, 508);
             this.submenu_Issua.Name = "submenu_Issua";
-            this.submenu_Issua.Size = new System.Drawing.Size(167, 101);
+            this.submenu_Issua.Size = new System.Drawing.Size(171, 101);
             this.submenu_Issua.TabIndex = 5;
             // 
             // add_issua
@@ -151,7 +151,7 @@
             this.add_issua.Location = new System.Drawing.Point(0, 50);
             this.add_issua.Name = "add_issua";
             this.add_issua.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.add_issua.Size = new System.Drawing.Size(167, 50);
+            this.add_issua.Size = new System.Drawing.Size(171, 50);
             this.add_issua.TabIndex = 1;
             this.add_issua.Text = "Add new";
             this.add_issua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -166,7 +166,7 @@
             this.list_issua.Location = new System.Drawing.Point(0, 0);
             this.list_issua.Name = "list_issua";
             this.list_issua.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.list_issua.Size = new System.Drawing.Size(167, 50);
+            this.list_issua.Size = new System.Drawing.Size(171, 50);
             this.list_issua.TabIndex = 0;
             this.list_issua.Text = "List";
             this.list_issua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -181,7 +181,7 @@
             this.btn_isssue_Book.Location = new System.Drawing.Point(0, 458);
             this.btn_isssue_Book.Name = "btn_isssue_Book";
             this.btn_isssue_Book.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btn_isssue_Book.Size = new System.Drawing.Size(167, 50);
+            this.btn_isssue_Book.Size = new System.Drawing.Size(171, 50);
             this.btn_isssue_Book.TabIndex = 4;
             this.btn_isssue_Book.Text = "Issued Books";
             this.btn_isssue_Book.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -198,7 +198,7 @@
             this.subMenu_Books.Dock = System.Windows.Forms.DockStyle.Top;
             this.subMenu_Books.Location = new System.Drawing.Point(0, 203);
             this.subMenu_Books.Name = "subMenu_Books";
-            this.subMenu_Books.Size = new System.Drawing.Size(167, 255);
+            this.subMenu_Books.Size = new System.Drawing.Size(171, 255);
             this.subMenu_Books.TabIndex = 3;
             // 
             // genres_Book_btn
@@ -210,7 +210,7 @@
             this.genres_Book_btn.Location = new System.Drawing.Point(0, 200);
             this.genres_Book_btn.Name = "genres_Book_btn";
             this.genres_Book_btn.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.genres_Book_btn.Size = new System.Drawing.Size(167, 50);
+            this.genres_Book_btn.Size = new System.Drawing.Size(171, 50);
             this.genres_Book_btn.TabIndex = 4;
             this.genres_Book_btn.Text = "Genres";
             this.genres_Book_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -226,7 +226,7 @@
             this.author_Book_btn.Location = new System.Drawing.Point(0, 150);
             this.author_Book_btn.Name = "author_Book_btn";
             this.author_Book_btn.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.author_Book_btn.Size = new System.Drawing.Size(167, 50);
+            this.author_Book_btn.Size = new System.Drawing.Size(171, 50);
             this.author_Book_btn.TabIndex = 3;
             this.author_Book_btn.Text = "Authors";
             this.author_Book_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -242,7 +242,7 @@
             this.pub_Book_btn.Location = new System.Drawing.Point(0, 100);
             this.pub_Book_btn.Name = "pub_Book_btn";
             this.pub_Book_btn.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.pub_Book_btn.Size = new System.Drawing.Size(167, 50);
+            this.pub_Book_btn.Size = new System.Drawing.Size(171, 50);
             this.pub_Book_btn.TabIndex = 2;
             this.pub_Book_btn.Text = "Publishers";
             this.pub_Book_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -258,7 +258,7 @@
             this.add_Book_btn.Location = new System.Drawing.Point(0, 50);
             this.add_Book_btn.Name = "add_Book_btn";
             this.add_Book_btn.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.add_Book_btn.Size = new System.Drawing.Size(167, 50);
+            this.add_Book_btn.Size = new System.Drawing.Size(171, 50);
             this.add_Book_btn.TabIndex = 1;
             this.add_Book_btn.Text = "Add Book";
             this.add_Book_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -274,7 +274,7 @@
             this.all_Book_btn.Location = new System.Drawing.Point(0, 0);
             this.all_Book_btn.Name = "all_Book_btn";
             this.all_Book_btn.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.all_Book_btn.Size = new System.Drawing.Size(167, 50);
+            this.all_Book_btn.Size = new System.Drawing.Size(171, 50);
             this.all_Book_btn.TabIndex = 0;
             this.all_Book_btn.Text = "All Books";
             this.all_Book_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -292,7 +292,7 @@
             this.btn_books.Location = new System.Drawing.Point(0, 153);
             this.btn_books.Name = "btn_books";
             this.btn_books.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btn_books.Size = new System.Drawing.Size(167, 50);
+            this.btn_books.Size = new System.Drawing.Size(171, 50);
             this.btn_books.TabIndex = 2;
             this.btn_books.Text = "Books";
             this.btn_books.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -309,7 +309,7 @@
             this.btn_dashboard.Location = new System.Drawing.Point(0, 103);
             this.btn_dashboard.Name = "btn_dashboard";
             this.btn_dashboard.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btn_dashboard.Size = new System.Drawing.Size(167, 50);
+            this.btn_dashboard.Size = new System.Drawing.Size(171, 50);
             this.btn_dashboard.TabIndex = 1;
             this.btn_dashboard.Text = "Dashboard";
             this.btn_dashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -322,14 +322,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(167, 103);
+            this.panel1.Size = new System.Drawing.Size(171, 103);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 7);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(142, 90);
             this.pictureBox1.TabIndex = 0;
@@ -343,7 +343,7 @@
             this.panelMain.Location = new System.Drawing.Point(188, 0);
             this.panelMain.Name = "panelMain";
             this.panelMain.Padding = new System.Windows.Forms.Padding(5);
-            this.panelMain.Size = new System.Drawing.Size(746, 666);
+            this.panelMain.Size = new System.Drawing.Size(826, 666);
             this.panelMain.TabIndex = 1;
             // 
             // pictureBox2
@@ -352,22 +352,22 @@
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(5, 5);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(736, 656);
+            this.pictureBox2.Size = new System.Drawing.Size(816, 656);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(934, 666);
+            this.ClientSize = new System.Drawing.Size(1014, 666);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.leftPanel);
             this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MinimumSize = new System.Drawing.Size(950, 600);
             this.Name = "Main";
-            this.Text = "Main";
+            this.Text = "Libary Book";
             this.leftPanel.ResumeLayout(false);
             this.subMenu_user.ResumeLayout(false);
             this.submenu_Issua.ResumeLayout(false);

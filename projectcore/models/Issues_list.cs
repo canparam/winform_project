@@ -8,13 +8,15 @@ namespace projectcore.models
 { 
 
     [Table("issua_list")]
-    public class Issua_list
+    public class Issues_list
     {
         [Key]
         public int id { get; set; }
         [Required]
         public int issue_id { get; set; }
         [Required]
-        public int issue_id { get; set; }
+        public int book_id { get; set; }
+        public int status { get; set; }
+
     }
 }

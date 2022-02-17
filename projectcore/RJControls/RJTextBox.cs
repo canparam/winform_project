@@ -135,7 +135,7 @@ namespace CustomControls.RJControls
             using (Pen penBorder = new Pen(borderColor, borderSize))
             {
                 penBorder.Alignment = System.Drawing.Drawing2D.PenAlignment.Inset;
-                if (isFocused) penBorder.Color = borderFocusColor;
+                //if (isFocused) penBorder.Color = borderFocusColor;
 
                 if (underlinedStyle) //Line Style
                     graph.DrawLine(penBorder, 0, this.Height - 1, this.Width, this.Height - 1);
@@ -180,7 +180,7 @@ namespace CustomControls.RJControls
 
         private void textBox1_Click(object sender, EventArgs e)
         {
-            this.OnClick(e);
+            //this.OnClick(e);
         }
 
         private void textBox1_MouseEnter(object sender, EventArgs e)

@@ -22,7 +22,6 @@ namespace projectcore.models
         public int author { get; set; }
         [Required]
         public int genre { get; set; }
-        [Required]
         public int status { get; set; }
         [Required]
         public int published_year { get; set; }

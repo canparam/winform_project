@@ -28,200 +28,172 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.allBookSearch = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.all_book_pub = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.all_book_author = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.bookBtnSearch = new CustomControls.RJControls.RJButton();
-            this.rjTextBox1 = new CustomControls.RJControls.RJTextBox();
-            this.tableAllBook = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.BOOK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AUTHOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PUBLISHER = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QUANTITY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ISSUED = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ACTION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.allBookSearch.SuspendLayout();
-            this.tableAllBook.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.all_book_input = new CustomControls.RJControls.RJTextBox();
+            this.book_btn_search = new CustomControls.RJControls.RJButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.list_book = new System.Windows.Forms.DataGridView();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.list_book)).BeginInit();
             this.SuspendLayout();
             // 
-            // allBookSearch
+            // panel1
             // 
-            this.allBookSearch.Controls.Add(this.comboBox2);
-            this.allBookSearch.Controls.Add(this.comboBox1);
-            this.allBookSearch.Controls.Add(this.label1);
-            this.allBookSearch.Controls.Add(this.bookBtnSearch);
-            this.allBookSearch.Controls.Add(this.rjTextBox1);
-            this.allBookSearch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.allBookSearch.Location = new System.Drawing.Point(0, 0);
-            this.allBookSearch.Name = "allBookSearch";
-            this.allBookSearch.Size = new System.Drawing.Size(981, 133);
-            this.allBookSearch.TabIndex = 0;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.all_book_pub);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.all_book_author);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.all_book_input);
+            this.panel1.Controls.Add(this.book_btn_search);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(892, 105);
+            this.panel1.TabIndex = 0;
             // 
-            // comboBox2
+            // label3
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(534, 71);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(151, 28);
-            this.comboBox2.TabIndex = 4;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(426, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 15);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Publisher";
             // 
-            // comboBox1
+            // all_book_pub
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(353, 71);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(151, 28);
-            this.comboBox1.TabIndex = 3;
+            this.all_book_pub.FormattingEnabled = true;
+            this.all_book_pub.Location = new System.Drawing.Point(426, 50);
+            this.all_book_pub.Name = "all_book_pub";
+            this.all_book_pub.Size = new System.Drawing.Size(165, 23);
+            this.all_book_pub.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(232, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 15);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Author";
+            // 
+            // all_book_author
+            // 
+            this.all_book_author.FormattingEnabled = true;
+            this.all_book_author.Location = new System.Drawing.Point(232, 50);
+            this.all_book_author.Name = "all_book_author";
+            this.all_book_author.Size = new System.Drawing.Size(167, 23);
+            this.all_book_author.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 40);
+            this.label1.Location = new System.Drawing.Point(13, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 20);
+            this.label1.Size = new System.Drawing.Size(67, 15);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Book Name";
+            this.label1.Text = "Book name";
             // 
-            // bookBtnSearch
+            // all_book_input
             // 
-            this.bookBtnSearch.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.bookBtnSearch.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.bookBtnSearch.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.bookBtnSearch.BorderRadius = 0;
-            this.bookBtnSearch.BorderSize = 0;
-            this.bookBtnSearch.FlatAppearance.BorderSize = 0;
-            this.bookBtnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bookBtnSearch.ForeColor = System.Drawing.Color.White;
-            this.bookBtnSearch.Location = new System.Drawing.Point(781, 64);
-            this.bookBtnSearch.Name = "bookBtnSearch";
-            this.bookBtnSearch.Size = new System.Drawing.Size(188, 35);
-            this.bookBtnSearch.TabIndex = 1;
-            this.bookBtnSearch.Text = "Search";
-            this.bookBtnSearch.TextColor = System.Drawing.Color.White;
-            this.bookBtnSearch.UseVisualStyleBackColor = false;
-            this.bookBtnSearch.Click += new System.EventHandler(this.bookBtnSearch_Click);
+            this.all_book_input.BackColor = System.Drawing.SystemColors.Window;
+            this.all_book_input.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.all_book_input.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.all_book_input.BorderSize = 2;
+            this.all_book_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.all_book_input.ForeColor = System.Drawing.Color.DimGray;
+            this.all_book_input.Location = new System.Drawing.Point(13, 42);
+            this.all_book_input.Margin = new System.Windows.Forms.Padding(4);
+            this.all_book_input.Multiline = false;
+            this.all_book_input.Name = "all_book_input";
+            this.all_book_input.Padding = new System.Windows.Forms.Padding(7);
+            this.all_book_input.PasswordChar = false;
+            this.all_book_input.Size = new System.Drawing.Size(200, 31);
+            this.all_book_input.TabIndex = 1;
+            this.all_book_input.Texts = "";
+            this.all_book_input.UnderlinedStyle = true;
             // 
-            // rjTextBox1
+            // book_btn_search
             // 
-            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjTextBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox1.Location = new System.Drawing.Point(13, 64);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.Size = new System.Drawing.Size(323, 35);
-            this.rjTextBox1.TabIndex = 0;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = true;
+            this.book_btn_search.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.book_btn_search.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.book_btn_search.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.book_btn_search.BorderRadius = 0;
+            this.book_btn_search.BorderSize = 0;
+            this.book_btn_search.FlatAppearance.BorderSize = 0;
+            this.book_btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.book_btn_search.ForeColor = System.Drawing.Color.White;
+            this.book_btn_search.Location = new System.Drawing.Point(634, 33);
+            this.book_btn_search.Name = "book_btn_search";
+            this.book_btn_search.Size = new System.Drawing.Size(150, 40);
+            this.book_btn_search.TabIndex = 0;
+            this.book_btn_search.Text = " Search";
+            this.book_btn_search.TextColor = System.Drawing.Color.White;
+            this.book_btn_search.UseVisualStyleBackColor = false;
+            this.book_btn_search.Click += new System.EventHandler(this.book_btn_search_Click);
             // 
-            // tableAllBook
+            // panel2
             // 
-            this.tableAllBook.Controls.Add(this.dataGridView1);
-            this.tableAllBook.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableAllBook.Location = new System.Drawing.Point(0, 133);
-            this.tableAllBook.Name = "tableAllBook";
-            this.tableAllBook.Size = new System.Drawing.Size(981, 412);
-            this.tableAllBook.TabIndex = 1;
+            this.panel2.Controls.Add(this.list_book);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 105);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(892, 304);
+            this.panel2.TabIndex = 1;
             // 
-            // dataGridView1
+            // list_book
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.BOOK,
-            this.AUTHOR,
-            this.PUBLISHER,
-            this.QUANTITY,
-            this.ISSUED,
-            this.ACTION});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(981, 412);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // BOOK
-            // 
-            this.BOOK.HeaderText = "BOOK";
-            this.BOOK.MinimumWidth = 6;
-            this.BOOK.Name = "BOOK";
-            // 
-            // AUTHOR
-            // 
-            this.AUTHOR.HeaderText = "AUTHOR";
-            this.AUTHOR.MinimumWidth = 6;
-            this.AUTHOR.Name = "AUTHOR";
-            // 
-            // PUBLISHER
-            // 
-            this.PUBLISHER.HeaderText = "PUBLISHER";
-            this.PUBLISHER.MinimumWidth = 6;
-            this.PUBLISHER.Name = "PUBLISHER";
-            // 
-            // QUANTITY
-            // 
-            this.QUANTITY.HeaderText = "QUANTITY";
-            this.QUANTITY.MinimumWidth = 6;
-            this.QUANTITY.Name = "QUANTITY";
-            // 
-            // ISSUED
-            // 
-            this.ISSUED.HeaderText = "ISSUED";
-            this.ISSUED.MinimumWidth = 6;
-            this.ISSUED.Name = "ISSUED";
-            // 
-            // ACTION
-            // 
-            this.ACTION.HeaderText = "ACTION";
-            this.ACTION.MinimumWidth = 6;
-            this.ACTION.Name = "ACTION";
+            this.list_book.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.list_book.BackgroundColor = System.Drawing.Color.White;
+            this.list_book.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.list_book.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.list_book.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.list_book.Location = new System.Drawing.Point(0, 0);
+            this.list_book.Name = "list_book";
+            this.list_book.RowTemplate.Height = 25;
+            this.list_book.Size = new System.Drawing.Size(892, 304);
+            this.list_book.TabIndex = 0;
+            this.list_book.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.list_book_CellClick);
+            this.list_book.VisibleChanged += new System.EventHandler(this.list_book_VisibleChanged);
             // 
             // allbook
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(981, 545);
-            this.Controls.Add(this.tableAllBook);
-            this.Controls.Add(this.allBookSearch);
+            this.ClientSize = new System.Drawing.Size(892, 409);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "allbook";
             this.Text = "allbook";
-            this.allBookSearch.ResumeLayout(false);
-            this.allBookSearch.PerformLayout();
-            this.tableAllBook.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.VisibleChanged += new System.EventHandler(this.allbook_VisibleChanged);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.list_book)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel allBookSearch;
-        private System.Windows.Forms.Panel tableAllBook;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BOOK;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AUTHOR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PUBLISHER;
-        private System.Windows.Forms.DataGridViewTextBoxColumn QUANTITY;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ISSUED;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ACTION;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridView list_book;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox all_book_pub;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox all_book_author;
         private System.Windows.Forms.Label label1;
-        private CustomControls.RJControls.RJButton bookBtnSearch;
-        private CustomControls.RJControls.RJTextBox rjTextBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private CustomControls.RJControls.RJTextBox all_book_input;
+        private CustomControls.RJControls.RJButton book_btn_search;
     }
 }
